@@ -1,0 +1,20 @@
+{
+  "port": 8919,
+  "target_host": "api.kimi.com",
+  "target_path_prefix": "/coding",
+  "coding_ua": "claude-cli/2.1.44 (external, sdk-cli)",
+  "auto_thinking": true,
+  "rate_limit_rpm": 30,
+  "max_retries": 2,
+  "keys": [
+    {
+      "key": "sk-kimi-your-key-here",
+      "name": "main-key"
+    }
+  ],
+  "telegram": {
+    "enabled": false,
+    "bot_token": "YOUR_BOT_TOKEN",
+    "chat_id": "YOUR_CHAT_ID"
+  }
+}

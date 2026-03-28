@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  kimi-proxy:
+    build: .
+    container_name: kimi-coding-proxy
+    restart: unless-stopped
+    ports:
+      - "8919:8919"
+    volumes:
+      - ./config.json:/app/config.json:ro
+    environment:
+      - CONFIG_PATH=/app/config.json
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8919/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
